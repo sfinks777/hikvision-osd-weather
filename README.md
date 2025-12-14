@@ -1,4 +1,4 @@
-# hikvision-osd-ntp
+# hikvision-osd-weather
 
 A utility for setting the On-Screen Display (OSD) text with weather forecast for Hikvision IP cameras.
 
