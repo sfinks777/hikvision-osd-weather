@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TextOverlay version="2.0" xmlns="http://www.hikvision.com/ver10/XMLSchema">
+    <id>1</id>
+    <enabled>true</enabled>
+    <displayText>Temp: -9/-10</displayText>
+    <frontColorMode>auto</frontColorMode>
+    <frontColor>000000</frontColor>
+    <alignment>alignLeft</alignment>
+</TextOverlay>

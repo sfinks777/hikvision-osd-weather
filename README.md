@@ -1,15 +1,15 @@
 # hikvision-osd-ntp
 
-A utility for setting  the On-Screen Display (OSD) text of Hikvision IP cameras and the Network Time Protocol (NTP) server settings, ensuring accurate timestamp overlays on video streams.
+A utility for setting the On-Screen Display (OSD) text with weather forecast for Hikvision IP cameras.
 
 ## Overview
 
-Many Hikvision IP cameras allow the display of a timestamp overlay (OSD) on their video feed. However, due to the absolute age of the devices and lack of modern support, the OSD is painful to set, NTP settings are mostly to help debug network issues for the NTP queries.
+Sometimes we need to set some mutable text to cameras OSD. This is working example of it.
+Script tested on Hikvision DS-2DE4425IW-DE camera.
 
 ## Features
 
 - Updates camera OSD
-- Supports multiple cameras and auth via configuration.
 - Compatible with Hikvision IP cameras supporting ISAPI.
 - Command-line interface for simplicity.
 
@@ -17,31 +17,30 @@ Many Hikvision IP cameras allow the display of a timestamp overlay (OSD) on thei
 
 - Bash
 - Curl
-- 1password if you use the optmpl file and update it yourself.
+- ansiweather
 
 ## Installation
+
+Install [ansiweather](https://github.com/fcambus/ansiweather):
+
+```bash
+sudo apt-get install ansiweather
+```
 
 Clone the repository and install dependencies:
 
 ```bash
-git clone https://github.com/na4ma4/hikvision-osd-ntp.git
-cd hikvision-osd-ntp
+git clone https://github.com/sfinks777/hikvision-osd-weather.git
+cd hikvision-osd-weather
 ```
 
 create a `.secrets` with the `HIK_USER` and `HIK_PASS` environment variables.
+update `.settings` with `WEATHER_LOCATION` paramener.
 
 ## Usage
 
 ```bash
-./setOSD.sh
-```
-
-```bash
-./testNTP.sh
-```
-
-```bash
-./setNTP.sh
+./setOverlayWeather.sh
 ```
 
 ## Security Notes
@@ -54,12 +53,13 @@ create a `.secrets` with the `HIK_USER` and `HIK_PASS` environment variables.
 
 - Only tested with Hikvision cameras supporting ISAPI.
 - Some camera firmware versions might not support OSD updates via API.
-- This tool only updates the OSD overlay and NTP settings.
+- This tool only updates the OSD overlay with weather forecast.
 
 ## Troubleshooting
 
 - Ensure your user account has permission to configure OSD settings.
 - Camera and host running this utility must be on the same network or have proper routing.
+- You have access to Internet for getting weather forecast.
 
 ## License
 
@@ -67,7 +67,8 @@ create a `.secrets` with the `HIK_USER` and `HIK_PASS` environment variables.
 
 ## Author(s)
 
-- [na4ma4](https://github.com/na4ma4)
+[sfinks777](https://github.com/na4ma4)
+Thanks to [na4ma4](https://github.com/na4ma4) for [base sources](https://github.com/na4ma4/hikvision-osd-ntp).
 
 ## Contributions
 
