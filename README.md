@@ -34,13 +34,14 @@ git clone https://github.com/sfinks777/hikvision-osd-weather.git
 cd hikvision-osd-weather
 ```
 
-create a `.secrets` with the `HIK_USER` and `HIK_PASS` environment variables.
-update `.settings` with `WEATHER_LOCATION` paramener.
+Create a `.secrets` with the `HIK_USER` and `HIK_PASS` environment variables.
+
+Update `.settings` with `WEATHER_LOCATION` paramener.
 
 ## Usage
 
 ```bash
-./setOverlayWeather.sh
+bash ./setOverlayWeather.sh
 ```
 
 ## Security Notes
@@ -68,6 +69,7 @@ update `.settings` with `WEATHER_LOCATION` paramener.
 ## Author(s)
 
 [sfinks777](https://github.com/na4ma4)
+
 Thanks to [na4ma4](https://github.com/na4ma4) for [base sources](https://github.com/na4ma4/hikvision-osd-ntp).
 
 ## Contributions
