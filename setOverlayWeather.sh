@@ -1,5 +1,9 @@
 #!/bin/bash
 
+#Change working directory
+WORK_DIR="$(dirname "$(realpath "$0")")"
+cd $WORK_DIR
+
 source .settings.sh
 
 # Input XML
